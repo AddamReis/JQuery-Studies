@@ -14,6 +14,16 @@
     <div>2</div>
 
     <script>
-        // ...
+        $('div').hide(5000).show(5000).fadeOut(5000) //seleciona as divs | #hide esconde depois de x tempo | #show exibe depois de x tempo | #fadeOut esconde depois de x tempo
+        console.log($('div').get(1))
+        console.log($.isEmptyObject({ nome: null })) //verifica se o objeto está ou não vazio
+        console.log(jQuery.inArray(3, [1, 2, 3])) //verifica se o nº 3 está dentro do array
+
+        $.fn.fundoVerde = function () {
+            this.css('background-color', 'green') //qual propriedade quer alterar e qual valor quer colocar
+            return this //retorna o próprio objeto (no caso a alteração do css na pagina)
+        }
+
+        $('body').fundoVerde().fadeOut(1000) //aplicou o verde e escondeu o body depois de 1s
     </script>
 </body>
